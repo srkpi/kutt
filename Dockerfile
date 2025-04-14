@@ -11,7 +11,7 @@ WORKDIR /kutt
 COPY package.json package-lock.json ./
 
 # download dependencies while using Docker's caching
-RUN --mount=type=cache,id=s/1f6eb2da-ed43-4591-965b-cbcdc0e8ccf0-/root/.npm,target=/root/.npm \
+RUN --mount=type=cache,id=s/7fbc439a-e053-4556-b840-352f91eda560-/root/.npm,target=/root/.npm \
     npm ci --omit=dev
 
 RUN mkdir -p /var/lib/kutt
